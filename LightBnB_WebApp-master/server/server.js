@@ -1,6 +1,7 @@
 const database = require('./database');
 const apiRoutes = require('./apiRoutes');
 const userRoutes = require('./userRoutes');
+const morgan = require('morgan');
 
 const path = require('path');
 
@@ -10,6 +11,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(morgan('dev'));
 app.use(cookieSession({
   name: 'session',
   keys: ['key1']
