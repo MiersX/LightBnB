@@ -1,0 +1,1 @@
+avg(property_reviews.rating)
